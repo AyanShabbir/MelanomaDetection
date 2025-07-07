@@ -7,7 +7,7 @@ IMAGE_SIZE = 224
 
 @st.cache_resource
 def load_model_cached():
-    return load_model("model/melanoma_model_final.h5")
+    return load_model("melanoma_model_final.h5")
 
 def preprocess_image(img):
     img = img.resize((IMAGE_SIZE, IMAGE_SIZE))
