@@ -35,7 +35,7 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-st.markdown("<div class='title'>Melanoma Detection AI</div>", unsafe_allow_html=True)
+st.markdown("<div class='title'>Melanoma Detection</div>", unsafe_allow_html=True)
 st.markdown("<div class='subtext'>Upload a dermoscopic image to classify as benign or malignant.</div>", unsafe_allow_html=True)
 
 
