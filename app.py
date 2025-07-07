@@ -6,7 +6,7 @@ import cv2
 import os
 from utlis import preprocess_image, load_model_cached, predict_class
 
-st.set_page_config(page_title="Melanoma Detection through AI", layout="centered")
+st.set_page_config(page_title="Melanoma Detection", layout="centered")
 
 st.markdown("""
     <style>
@@ -51,7 +51,7 @@ if uploaded_file is not None:
         img_array = preprocess_image(img)
         prob = model.predict(img_array)[0]
 
-        label = "🔴 Malignant" if prob[1] > 0.2 else "🔵 Benign"
+        label = "Malignant" if prob[1] > 0.2 else "Benign"
 
         st.markdown(f"### Prediction: {label}")
         st.markdown(f"**Confidence Scores:**<br>Benign: `{prob[0]:.2f}` Malignant: `{prob[1]:.2f}`", unsafe_allow_html=True)
